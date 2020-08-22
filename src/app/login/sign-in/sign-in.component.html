@@ -1,0 +1,20 @@
+<mat-card id="card" class="login-card">
+    <mat-card-title>
+      login
+    </mat-card-title>
+    <mat-card-content>
+        <mat-error *ngIf="loginError">
+            Invalid Credentials!!
+          </mat-error>
+      <mat-form-field class="full-width">
+        <input matInput [(ngModel)]="username" placeholder="email">
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="full-width">
+        <input matInput [(ngModel)]="password" type="password" placeholder="password">
+      </mat-form-field>
+      <br/><br/>
+      <button mat-flat-button color="primary" (click)="signIn()">login</button>
+
+    </mat-card-content>
+    </mat-card>

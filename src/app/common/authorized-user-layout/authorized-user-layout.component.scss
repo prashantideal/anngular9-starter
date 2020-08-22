@@ -1,0 +1,78 @@
+mat-drawer {
+  background: #FFFFFF;
+  .material-icons {
+    transform: scale(1.5);
+  }
+  .header {
+    padding: 30px;
+    width: 100%;
+    min-height: 100px;
+    border-bottom: 1px solid rgba(107, 106, 106, 0.68);
+  }
+  section{
+    &.menu{
+      text-align: center;
+      max-width: 62px;
+    }
+
+    &.logo{
+      text-align: left;
+      margin: 30px;
+      margin-left: 18px;
+      h3{
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+  }
+  mat-nav-list{
+    margin: 30px;
+  }
+  mat-list-item {
+    .material-icons {
+      transform: scale(1.1);
+   }
+    h4{
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+main{
+  font-size: 1em;
+  padding: 30px;
+}
+
+mat-toolbar{
+  background-color:#F9F8F8;
+  padding-left: 30px;
+  padding-right: 30px;
+  .material-icons {
+    transform: scale(1.2);
+ }
+ .mat-icon-button{
+   margin : 2px 15px 2px 15px;
+ }
+ .watch{
+   font-size: 0.8em;
+   margin: 0px 15px;
+ }
+}
+
+mat-drawer-container {
+  height: 100% !important;
+  .mat-drawer-backdrop{
+  &.mat-drawer-shown{
+    background-color: transparent;
+  }
+}
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+

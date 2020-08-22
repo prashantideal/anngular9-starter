@@ -1,0 +1,24 @@
+
+  .logoContainer{
+    padding :20px;
+    display: flex;
+    margin-top: 25px;
+
+    a{
+      color: #040721;
+      text-decoration: none;
+      cursor: pointer;
+      p{
+        display: flexbox;
+        margin-block-start: 0px;
+      }
+    }
+    .logoTxt{
+      font-size:12px;
+      padding: 0 0 0 6px;
+      //color:$colorGrey_2;
+      color:#6F719B;
+      font-weight: 600;
+      display:block;
+    }
+  }

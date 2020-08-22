@@ -1,0 +1,56 @@
+@import '~@angular/material/theming';
+@include mat-core();
+// _variable.scss
+$colorBlack:#000000;
+$colorPrimary:#040721;
+$colorWhite:#fff;
+$colorLightGrey:#EAEAF0;
+$colorGrey_1:#EAEAF0;
+$colorGrey_2:#6F719B;
+$colorFrmBorder:#9498B5;
+$colorYellow:#F9DA87;
+$colorError:#DA7C7C;
+$colorError_1:#FF3535;
+$colorBloodyRed:#E62C2F;
+$colorGreen:#7cda98;
+$colorGreenNew:#5ECC4D;
+$colorLinkHover:#404489;
+$colorBlue:#6A35FF;
+$background: #F9F8F8;
+
+
+$custom-typography: mat-typography-config(
+  $font-family: 'gothic-a1,Roboto, monospace',
+  $headline: mat-typography-level(32px, 48px, 300),
+  $body-1: mat-typography-level(16px, 24px, 200),
+);
+
+//font
+$fontLight:300;
+$fontRegular:400;
+$fontMidum:500;
+$fontSemiBold:600;
+$fontBold:700;
+
+
+$my-app-primary: mat-palette($mat-light-blue);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
+@include mat-core($custom-typography);
+
+
+.mat-drawer {
+  &.mat-drawer-side {
+    @include _mat-theme-elevation(16, $my-app-theme);
+  }
+}
+

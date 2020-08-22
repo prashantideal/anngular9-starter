@@ -1,0 +1,44 @@
+<mat-drawer-container [hasBackdrop]="false" autosize="true">
+  <mat-drawer #drawer mode="side" [opened]="true" disableClose="true">
+    <div class="header">
+      <section class="menu">
+        <span mat-mini-fab (click)="isExpanded = !isExpanded"
+          class="material-icons">{{isExpanded ? 'menu_open' : 'menu'}}</span>
+      </section>
+      <section class="logo"><h3>{{isExpanded ? 'Your App' : 'YA'}}</h3>
+      </section>
+    </div>
+
+    <mat-nav-list>
+      <mat-list-item routerLink="side-menu1" routerLinkActive="active">
+        <mat-icon mat-list-icon>location_on</mat-icon>
+        <h4 mat-line *ngIf="isExpanded">Side Menu 1</h4>
+      </mat-list-item>
+      <mat-list-item routerLink="side-menu2" routerLinkActive="active">
+        <mat-icon mat-list-icon>location_off</mat-icon>
+        <h4 mat-line *ngIf="isExpanded">Side Menu 2</h4>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+
+    <mat-toolbar>
+      <span>App Name</span>
+      <span class="toolbar-spacer"></span>
+      <button mat-icon-button>
+        <mat-icon>qr_code</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>notification_important</mat-icon>
+      </button>
+      <button mat-icon-button>
+          <mat-icon>person_outline</mat-icon>
+      </button>
+    </mat-toolbar>
+    <main>
+      <div class="route-content">
+      <router-outlet></router-outlet>
+      </div>
+    </main>
+  </mat-drawer-content>
+</mat-drawer-container>
