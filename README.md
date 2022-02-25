@@ -10,7 +10,7 @@ Basic project template with pre-configured:
 
 No need to start from scartch with boiler-plate code, just fork and start building your features.
 
-# TcCms
+# Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
